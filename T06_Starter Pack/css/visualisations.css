@@ -1,0 +1,91 @@
+/* Responsive container of the svg element */
+.responsive-svg-container {
+    width: 100%;
+    max-width: 1000px;
+}
+
+@media screen and (max-width: 596px) {
+    .responsive-svg-container {
+        margin-bottom: 20px;
+    }
+}
+
+.axis-label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    fill: #5a3e2b;
+    /* Dark brown */
+}
+
+/* Code based on Dufour and Meeks (2024) */
+
+/* ---- Add this to the bottom of css/visualisations.css ---- */
+
+/* Rows of filter buttons */
+#filters_screen,
+#filters_size {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 14px 0;
+}
+
+/* Filter buttons */
+.filter-btn {
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #d2691e;      /* match your header orange if different */
+    border: none;
+    border-radius: 8px;
+    padding: 8px 26px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.filter-btn:hover {
+    background-color: #b25416;
+}
+
+.filter-btn:active {
+    transform: scale(0.97);
+}
+
+.filter-btn:focus-visible {
+    outline: 3px solid #5a3a2a;
+    outline-offset: 2px;
+}
+
+/* Selected button */
+.filter-btn.active {
+    background-color: #ffc97a;
+    color: #ffffff;
+}
+
+/* Chart text */
+.responsive-svg-container svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.x-axis text,
+.y-axis text {
+    font-size: 11px;
+    fill: #3b2a20;
+}
+
+.axis-label {
+    font-size: 13px;
+    fill: #3b2a20;
+}
+
+.empty-message {
+    font-size: 16px;
+    fill: #5a3a2a;
+}
+
+.bar:hover {
+    fill: #4a4d4d;
+}
